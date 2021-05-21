@@ -33,16 +33,16 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // [45, 27, 57, 1330, 560, 800, 200, 70, 945, 54]
 
 
-let newNumbers = [];
+// let newNumbers = [];
 
-for (let index = 0; index <= numbers.length-1; index += 1) {
-  if (index < numbers.length-1) {
-    let numbersMulti = numbers[index] * numbers [index + 1];
-    newNumbers.push(numbersMulti);
-  } else {
-    let numbersMulti2 = numbers[index] * 2;
-    newNumbers.push(numbersMulti2);
-  }
-}
+// for (let index = 0; index <= numbers.length-1; index += 1) {
+//   if (index < numbers.length-1) {
+//     let numbersMulti = numbers[index] * numbers [index + 1];
+//     newNumbers.push(numbersMulti);
+//   } else {
+//     let numbersMulti2 = numbers[index] * 2;
+//     newNumbers.push(numbersMulti2);
+//   }
+// }
 
-console.log(newNumbers);
+// console.log(newNumbers);
