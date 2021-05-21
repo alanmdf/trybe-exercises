@@ -78,14 +78,14 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 // 7. Utilizando for , descubra qual o menor valor contido no array e imprima-o;
 
-let lowerNumber = Infinity;
+// let lowerNumber = Infinity;
 
-for (index = 0; index < numbers.length; index += 1) {
-  if (lowerNumber > numbers[index]) {
-    lowerNumber = numbers[index];
-  }
-}
-  console.log('O menor valor é: ' + lowerNumber);
+// for (index = 0; index < numbers.length; index += 1) {
+//   if (lowerNumber > numbers[index]) {
+//     lowerNumber = numbers[index];
+//   }
+// }
+//   console.log('O menor valor é: ' + lowerNumber);
 
 // Após pesquisa no google, descobri o conceito de "Infinity" através desses links: 
 // https://pt.stackoverflow.com/questions/215181/pegar-o-menor-valor-e-o-maior-valor-de-um-array-com-javascript
