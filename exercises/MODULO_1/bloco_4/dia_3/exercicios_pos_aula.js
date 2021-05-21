@@ -31,14 +31,12 @@
 // ****
 // *****
 
-let n = 5;
-let aux = '*';
+// let n = 5;
+// let aux = '*';
 
-if (n === 0) {
-  console.log('Valor inválido');
-} else {
-  for (index = 1; index <= n; index += 1) {
-  console.log(aux.repeat(n));
-  }
-}
-
+// if (n === 0) {
+//   console.log('Valor inválido');
+// } else {
+//   for (index = 1; index <= n; index += 1) {
+//   console.log(aux.repeat(index));
+//   }
