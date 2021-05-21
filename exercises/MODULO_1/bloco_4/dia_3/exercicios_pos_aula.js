@@ -40,3 +40,30 @@
 //   for (index = 1; index <= n; index += 1) {
 //   console.log(aux.repeat(index));
 //   }
+
+// 3- Agora inverta o lado do triângulo. Por exemplo:
+
+// n = 5
+
+//     *
+//    **
+//   ***
+//  ****
+// *****
+
+// let n = 8;
+// let aux = '*';
+// let aux2 = ' ';
+
+// if (n === 0) {
+//   console.log('Valor inválido');
+// } else {
+//   for (index = 1; index <= n; index += 1) {
+//   let newN = n - index
+//     if (newN === 0) {
+//       break;
+//     } else {
+//       console.log(aux2.repeat(newN) + aux.repeat(index));
+//    }
+//   }
+// }
