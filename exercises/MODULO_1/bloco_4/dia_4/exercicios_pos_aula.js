@@ -2,11 +2,11 @@
 
 // Usando o objeto abaixo, faça os exercícios a seguir:
 
-let info = {
-  personagem: 'Margarida',
-  origem: 'Pato Donald',
-  nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
-};
+// let info = {
+//   personagem: 'Margarida',
+//   origem: 'Pato Donald',
+//   nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+// };
 
 // 1. Imprima no console uma mensagem de boas-vindas para a personagem acima, incluindo seu nome.
 // Valor esperado no console: Bem-vinda, Margarida
@@ -22,7 +22,7 @@ let info = {
 //   recorrente: 'Sim'
 // };
 
-info.recorrente = 'Sim';
+// info.recorrente = 'Sim';
 // console.log(info);
 
 // 3. Faça um for/in que mostre todas as chaves do objeto.
@@ -96,15 +96,15 @@ info.recorrente = 'Sim';
 // Array de teste: [2, 3, 6, 7, 10, 1]; .
 // Valor esperado no retorno da função: 4 .
 
-function highValueIndex (array) {
-  let newHighValueIndex = 0;
-  for (index = 0; index < array.length; index += 1) {
-    if (array[newHighValueIndex] < array[index]) {
-      newHighValueIndex = index;
-    }
-  }
-  console.log(newHighValueIndex);
-}
+// function highValueIndex (array) {
+//   let newHighValueIndex = 0;
+//   for (index = 0; index < array.length; index += 1) {
+//     if (array[newHighValueIndex] < array[index]) {
+//       newHighValueIndex = index;
+//     }
+//   }
+//   console.log(newHighValueIndex);
+// }
 
 // testArray = [50, 20, 202, 100, 93, 87, 101];
 // highValueIndex(testArray);
@@ -147,39 +147,41 @@ function highValueIndex (array) {
 // Array de teste: [2, 3, 2, 5, 8, 2, 3]; .
 // Valor esperado no retorno da função: 2 .
 
-function mostRepeatedNumber (array) {
-  let repeatedNumberCounter = [];
-  for (let index = 0; index < array.length; index += 1) {
-    countRepeatedNumber = 0;
-    for (let index2 = 0; index2 < array.length; index2 += 1) {
-      if (array[index] === array[index2]) {
-        countRepeatedNumber += 1;
-      }
-    }
-    repeatedNumberCounter.push(countRepeatedNumber);
-  }
-  highValue(repeatedNumberCounter)
-}
+// function mostRepeatedNumber (array) {
+//   let repeatedNumberCounter = [];
+//   let mostRepeatedNumber; 
+//   for (let index = 0; index < array.length; index += 1) {
+//     let countRepeatedNumber = 1;       
+//     for (let index2 = 0; index2 < array.length; index2 += 1) {
+//       if (array[index] === array[index2] && index !== index2) {
+//         countRepeatedNumber += 1;
+//         mostRepeatedNumber = array[index];
+//       }
+//     }
+//     repeatedNumberCounter.push(countRepeatedNumber);
+//   }
+//   console.log(repeatedNumberCounter);
+// }
 
-function highValue (array) {
-  let newHighValue = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[newHighValueIndex] < array[index]) {
-      newHighValue[index] = index;
-    }
-  }
-  console.log(newHighValue);
-}
-
-testArray = [2, 3, 2, 5, 8, 2, 3];
-mostRepeatedNumber(testArray);
+// testArray = [2, 3, 2, 5, 8, 2, 3];
+// mostRepeatedNumber(testArray);
 
 
 // 5. Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
 // Valor de teste: N = 5 .
 // Valor esperado no retorno da função: 1+2+3+4+5 = 15 .
 
+// let testNumber = 10;
 
+// integerSum(testNumber);
+
+// function integerSum (n) {
+//   let totalSum = 0;
+//   for (let index = 0; index < n; index += 1) {
+//    totalSum += (n - index);
+//   }
+//   console.log(totalSum);
+// }
 
 // 6. Crie uma função que receba uma string word e outra string ending . Verifique se a string ending é o final da string word . Considere que a string ending sempre será menor que a string word .
 // Valor de teste: 'trybe' e 'be'
@@ -188,3 +190,29 @@ mostRepeatedNumber(testArray);
 // Retorno esperado: true
 // verificaFimPalavra('joaofernando', 'fernan') ;
 // Retorno esperado: false
+
+let testStringWord = 'teste';
+let testStringEnding = 'oi';
+
+testEndingOfString(testStringWord, testStringEnding);
+
+function testEndingOfString (stringWord, stringEnding) {
+  let result = true;
+  let stringEndingIndex = stringEnding.length-1;
+  if (stringWord.length < stringEnding.length) {
+    console.log('Entradas inválidas. A string word necessita ser maior que a string ending.');
+  } else {
+    for (let index = stringWord.length-1; index === stringEndingIndex; index -= 1) {
+      if (stringWord[index] !== stringEnding[stringEndingIndex]) {
+        result = false;
+        console.log(result);
+      } else {
+        stringEndingIndex -= 1;
+        if (stringEndingIndex < 0) {
+          break;
+        }
+      }
+    }
+  }
+  console.log(result);
+}
