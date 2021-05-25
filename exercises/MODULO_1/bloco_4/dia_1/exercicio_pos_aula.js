@@ -7,14 +7,14 @@
 // Divisão (a / b)
 // /Módulo (a % b)
 
-let a = 3;
-let b = 2;
+// let a = 3;
+// let b = 2;
 
-let soma = a + b;
-let subtracao = a - b;
-let multi = a * b;
-let div = a / b;
-let mod = a % b;
+// let soma = a + b;
+// let subtracao = a - b;
+// let multi = a * b;
+// let div = a / b;
+// let mod = a % b;
 
 // 2. Faça um programa que retorne o maior de dois números. Defina no começo do programa duas variáveis com os valores que serão comparados.
 
