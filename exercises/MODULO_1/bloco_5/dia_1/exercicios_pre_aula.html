@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p class = "text" id="paragraph">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p class = "text" id="second-paragraph">Segundo parágrafo!</p>
+
+    <script>
+      const paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+// 1. Recupere o elemento que contém o título da página e faça algo com ele, como alterá-lo para o nome do seu filme favorito.
+//    let newTitle = document.getElementById("page-title");
+//    newTitle.innerText = "Click";
+// // 2. Agora recupere o segundo parágrafo e use sua criatividade para alterá-lo.
+//    let newSecondParagraph = document.getElementById('second-paragraph');
+//    newSecondParagraph.innerText = 'É o melhor filme do mundo vlw flw VIVA ADAM SANDLER';
+// // 3. Por fim, recupere o subtítulo e altere-o também.
+//    let newSubtitle = document.getElementById('subtitle') 
+//    newSubtitle.innerText = 'Risos e choros garantidos';
+// // 4. Adicione uma classe igual para os dois parágrafos.
+// // 5. Recupere os seus parágrafos via código JavaScript , usando a função getElementsByClassName ;
+//    let paragraphs = document.getElementsByClassName('text');
+// // 6. Altere algum estilo do primeiro deles.
+//    paragraphs[0].style.backgroundColor = 'yellow';
+// // 7. Recupere o subtítulo e altere a cor dele usando a função getElementsByTagName .
+//    let getSubtitleByTag = document.getElementsByTagName('h4');
+//    getSubtitleByTag[0].style.color = 'blue';
+// 8. Para praticar, substitua todas as funções que você usou no exercício anterior por querySelector e/ou querySelectorAll.
+      let newTitle = document.querySelector("#page-title");
+      newTitle.innerText = "Click";
+      let newSecondParagraph = document.querySelector('#second-paragraph');
+      newSecondParagraph.innerText = 'É o melhor filme do mundo vlw flw VIVA ADAM SANDLER';
+      let newSubtitle = document.querySelector('#subtitle');
+      newSubtitle.innerText = 'Risos e choros garantidos';
+      let paragraphs = document.querySelectorAll('.text');
+      paragraphs[0].style.color = 'green';
+      let getSubtitleByQuery = document.querySelectorAll('h4');
+      getSubtitleByQuery[0].style.backgroundColor = 'pink';
+    </script>
+  </body>
+</html>
