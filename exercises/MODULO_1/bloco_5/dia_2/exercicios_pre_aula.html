@@ -1,0 +1,92 @@
+<div id="paiDoPai">
+  <div id="pai">
+    <div id="primeiroFilho"></div>
+    <div id="elementoOndeVoceEsta">
+      <div id="primeiroFilhoDoFilho"></div>
+      <div id="segundoEUltimoFilhoDoFilho"></div>
+    </div>
+    Atenção!
+    <div id="terceiroFilho"></div>
+    <div id="quartoEUltimoFilho"></div>
+  </div>
+</div>
+
+<!-- PARTE I - Buscando Elementos
+
+1. Acesse o elemento elementoOndeVoceEsta . OK
+R: document.querySelector('#elementoOndeVoceEsta');
+   <div id=​"elementoOndeVoceEsta">​…​</div>
+
+2. Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele. OK
+R: document.querySelector('#elementoOndeVoceEsta').parentNode;
+   <div id=​"pai">​…​</div>​
+   document.querySelector('#elementoOndeVoceEsta').parentNode.style.backgroundColor = 'red';
+   "red"
+
+3. Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso? OK
+R: document.querySelector('#primeiroFilhoDoFilho').innerText = 'Que susto o course caiu bicho!';
+   "Que susto o course caiu bicho!"
+
+4. Acesse o primeiroFilho a partir de pai . OK
+R: document.querySelector('#pai').firstElementChild;
+   <div id=​"primeiroFilho">​</div>
+
+5. Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta . OK
+R: document.querySelector('#elementoOndeVoceEsta').previousElementSibling;
+   <div id=​"primeiroFilho">​</div>
+
+6. Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta . OK
+R: document.querySelector('#elementoOndeVoceEsta').previousSibling;
+   #textassignedSlot: nullbaseURI: "http://127.0.0.1:5500/exercicios_pre_aula.html"childNodes: NodeList []data: "\n    "firstChild: nullisConnected: truelastChild: nulllength: 5nextElementSibling: div#elementoOndeVoceEstanextSibling: div#elementoOndeVoceEstanodeName: "#text"nodeType: 3nodeValue: "\n    "ownerDocument: documentparentElement: div#paiparentNode: div#paipreviousElementSibling: div#primeiroFilhopreviousSibling: div#primeiroFilhotextContent: "\n    "wholeText: "\n    "__proto__: Text  
+
+7. Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta . OK
+R: document.querySelector('#elementoOndeVoceEsta').nextElementSibling;
+   <div id=​"terceiroFilho">​</div>
+
+8. Agora acesse o terceiroFilho a partir de pai . OK
+R: document.querySelector('#pai').lastElementChild.previousElementSibling;
+   <div id=​"terceiroFilho">​</div>
+
+-->
+
+<!--  PARTE II - Criando elementos
+
+1. Crie um irmão para elementoOndeVoceEsta .
+R: let creatingBrother = document.querySelector('#pai');
+   let elementoOndeVoceEstaBrother = document.createElement('p');
+   elementoOndeVoceEstaBrother.innerText = 'Olá, mundo!';
+   creatingBrother.appendChild(elementoOndeVoceEstaBrother);
+
+2. Crie um filho para elementoOndeVoceEsta .
+R: let creatingChild = document.querySelector('#elementoOndeVoceEsta');
+   let elementoOndeVoceEstaChild = document.createElement('p');
+   elementoOndeVoceEstaChild.innerText = 'Oi papai! :)';
+   creatingChild.appendChild(elementoOndeVoceEstaChild);
+
+3. Crie um filho para primeiroFilhoDoFilho .
+R: let creatingChild2 = document.querySelector('#primeiroFilhoDoFilho');
+   let primeiroFilhoDoFilhoChild = document.createElement('p');
+   primeiroFilhoDoFilhoChild.innerText = 'Oi papai! Cadê vovô?';
+   creatingChild2.appendChild(primeiroFilhoDoFilhoChild);
+
+4. A partir desse filho criado, acesse terceiroFilho . 
+R: document.querySelector('#primeiroFilhoDoFilho p').parentElement.parentElement.nextElementSibling;
+   <div id=​"terceiroFilho">​</div>​
+
+-->
+
+<!-- PARTE III - Removendo elementos
+
+1. Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
+R: let paiDoPaiList = document.getElementById('paiDoPai');
+   let paiID = document.getElementById('pai');
+   let elementoOndeVoceEstaID = document.getElementById('elementoOndeVoceEsta');
+   let primeiroFilhoDoFilhoID = document.getElementById('primeiroFilhoDoFilho');
+   for (let index = 0; index < paiDoPaiList.children.length; index += 1) {
+     let element = paiDoPaiList[index];
+     let elementID = document.getElementById
+     if (paiDoPaiList[index].innerHTML !== paiID || paiDoPaiList[index].innerHTML !== elementoOndeVoceEstaID || paiDoPaiList[index].innerHTML ! == primeiroFilhoDoFilhoID) {
+       paiDopaiList.removeChild();
+     }
+    }
+ -->
