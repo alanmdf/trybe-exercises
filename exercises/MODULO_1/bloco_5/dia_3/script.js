@@ -66,12 +66,17 @@ function createHolidaysButton() {
 
 // É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)".
 
+const holidays = document.getElementsByClassName('holiday');
+
 holidaysButton.addEventListener('click', changeBGColor);
 
 function changeBGColor() {
-  let holidays = document.getElementsByClassName('holiday');
   for (let index = 0; index < holidays.length; index += 1) {
-    holidays[index].style.backgroundColor = 'yellow';
+    if (holidays[index].style.backgroundColor === 'yellow') {
+      holidays[index].style.backgroundColor = 'rgb(238, 238, 238)';
+    } else {
+      holidays[index].style.backgroundColor = 'yellow';
+    }
   }
 }
 
@@ -99,12 +104,23 @@ function createFridayButton() {
 
 // É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
 
+const fridays = document.getElementsByClassName('friday');
+
+let saveFridaysDays = [];
+saveFridaysDays.push(fridays[0].innerText);
+saveFridaysDays.push(fridays[1].innerText);
+saveFridaysDays.push(fridays[2].innerText);
+saveFridaysDays.push(fridays[3].innerText);
+
 fridayButton.addEventListener('click', changeToSextou);
 
 function changeToSextou() {
-  let fridays = document.querySelectorAll('.friday');
   for (let index = 0; index < fridays.length; index += 1) {
-    fridays[index].innerText = 'SEXTOU';
+    if (fridays[index].innerText === 'SEXTOU') {
+      fridays[index].innerText = saveFridaysDays[index];
+    } else {
+      fridays[index].innerText = 'SEXTOU';
+    }
   }
 }
 
@@ -137,8 +153,6 @@ function zoomOutDay (element) {
 const myTasksDiv = document.querySelector('.my-tasks');
 
 addTasks('Cozinhar');
-addTasks('Estudar');
-addTasks('Assistir Filme');
 
 function addTasks(task) {
   let newTask = document.createElement('span');
@@ -154,12 +168,39 @@ function addTasks(task) {
 
 // O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks".
 
-// function taskColor() {
-//   let newTaskColor = document.createElement('div');
+taskColor('green');
+
+function taskColor(color) {
+  let newTaskColor = document.createElement('div');
+  newTaskColor.className = 'task';
+  newTaskColor.style.backgroundColor = color;
+  myTasksDiv.appendChild(newTaskColor);
+}
+
+// Exercício 9:
+
+// Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected , ela estará selecionada.
+
+// Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
+
+// newTaskColor.addEventListener('click', selectTask);
+
+// function selectTask () {
 
 // }
 
-// const myTasksHeader = document.querySelector('.my-tasks').firstChild;
-// console.log(myTasksHeader);
+// Exercício 10:
 
-// console.log(document.querySelector('.my-tasks').children);
+// Implemente uma função que adiciona um evento que, ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
+
+// Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) .
+
+// Bônus:
+
+// Vamos adicionar compromissos ao seu calendário? Implemente uma função que, ao digitar um compromisso na caixa de texto "COMPROMISSOS", adiciona o item à lista "MEUS COMPROMISSOS" ao clicar no botão "ADICIONAR".
+
+// Se nenhum caractere for inserido no campo input , a função deve retornar um alert com uma mensagem de erro ao clicar em "ADICIONAR".
+
+// Ao pressionar a tecla "enter" o evento também deverá ser disparado.
+
+// Dica - Propriedade: keyCode .
