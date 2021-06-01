@@ -1,0 +1,33 @@
+.main-content {
+  width: 40%;
+  text-align: justify;
+  margin-top: 5px;
+  display:inline-block;
+  margin-left: 5%;
+  margin-right: auto;
+}
+
+.main-header {
+  text-align: center;
+}
+
+.buttons-section {
+  display: inline-block;
+  border: 1px solid black;
+  width: 40%;
+  height: auto;
+  margin-left: 5%;
+  margin-top: 20px;
+  vertical-align: top;
+  text-align: center;
+  line-height: 0.5em;
+}
+
+.button {
+  display: inline-block;
+  margin: 10px;
+}
+
+.changeBG-div, .changeFontColor-div, .changeFontSize-div, .changeLineHeight-div, .changeFontFamily-div {
+  display: inline-block;
+}
