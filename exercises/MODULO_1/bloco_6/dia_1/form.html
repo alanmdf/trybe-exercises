@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6.1 - Exercicios Pós Aula</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="box-style">
+    <h1>Cadastre seu currículo</h1>
+  </header>
+  <form action="" method="get" class="box-style">
+    <fieldset>
+      <div class="line-content">
+        <label for="full-name">Nome completo: </label>
+      <input type="text" name="full-name" id="full-name" maxlength="40" required>
+      </div>
+      <div class="line-content">
+        <label for="email">E-mail: </label>
+        <input type="email" name="email" id="email" maxlength="50" required>
+      </div>
+      <div class="line-content">
+        <label for="cpf">CPF: </label>
+        <input type="text" name="cpf" id="cpf" maxlength="11" required>
+      </div>
+      <div class="line-content">
+        <label for="address">Endereço: </label>
+        <input type="text" name="address" id="address">
+      </div>
+      <div class="line-content">
+        <label for="states">Selecione seu estado: </label>
+        <select name="state" id="states" required></select>
+      </div>
+      <div class="line-content">
+        <p>Tipo de moradia: </p>
+        <input type="radio" value="house" name="housing-type" id="house" required>
+        <label for="house">Casa</label>
+        <br>
+        <input type="radio" value="apartment" name="housing-type" id="apartment" required>
+        <label for="apartment">Apartamento</label>
+      </div>
+
+
+    </fieldset>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: rgba(207, 207, 205, 0.726);
+}
+
+.box-style {
+  background-color: rgb(174, 218, 203);
+  margin: 40px auto;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.box-style h1 {
+  text-align: center;
+}
+
+.line-content {
+  margin: 15px;
+}
+
+.line-content input[type="text"], input[type="email"] {
+  width: 100%;
+}
