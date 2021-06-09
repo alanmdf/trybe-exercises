@@ -13,6 +13,7 @@
   </header>
   <form action="" method="get" class="box-style">
     <fieldset>
+      <legend>Dados pessoais: </legend>
       <div class="line-content">
         <label for="full-name">Nome completo: </label>
       <input type="text" name="full-name" id="full-name" maxlength="40" required>
@@ -41,7 +42,27 @@
         <input type="radio" value="apartment" name="housing-type" id="apartment" required>
         <label for="apartment">Apartamento</label>
       </div>
-
+    </fieldset>
+    <fieldset>
+      <legend>Sobre seu último emprego: </legend>
+      <div class="line-content">
+        <label for="resume-abstract">Resumo do currículo: </label>
+        <textarea name="resume-abstract" id="resume-abstract" cols="30" rows="6" required></textarea>
+      </div>
+      <div class="line-content">
+        <label for="last-position">Cargo: </label>
+        <input type="text" maxlength="40" name="last-position" id="last-position" required>
+      </div>
+      <div class="line-content">
+      <label for="position-description">Descrição do cargo: </label>
+      <input type="text"  maxlength="500" name="position-description" id="position-description" required >
+      </div>
+      <div class="line-content">
+        <p>Data de início: </p>
+        <input type="text" name="beggining-day" id="beggining-day" maxlength="2" required><span> /</span>
+        <input type="text" name="beggining-month" id="beggining-month" maxlength="2" required><span> /</span>
+        <input type="text" name="beggining-year" id="beggining-year" maxlength="4" required>
+      </div>
 
     </fieldset>
   </form>
