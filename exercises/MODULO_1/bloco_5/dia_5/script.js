@@ -89,4 +89,10 @@ window.onload = function() {
   changeFontFamily ('.fontfamily1', 'Arial');
   changeFontFamily ('.fontfamily2', 'Courier');
   changeFontFamily ('.fontfamily3', 'monospace');
+
+  console.log(localStorage);
+  localStorage.removeItem('Arial');
+  localStorage.removeItem('Courier');
+  localStorage.removeItem('body.style.fontFamily');
+  localStorage.removeItem('body.style.font-family');
 }
