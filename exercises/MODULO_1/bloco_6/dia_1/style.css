@@ -1,0 +1,45 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: rgba(207, 207, 205, 0.726);
+}
+
+.box-style {
+  background-color: rgb(174, 218, 203);
+  margin: 40px auto;
+  width: 80%;
+  border-radius: 3px;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 2px;
+  border: 1px solid grey;
+}
+
+.box-style h1 {
+  text-align: center;
+  font-size: 25px;
+}
+
+.line-content {
+  margin: 15px;
+}
+
+.line-content input[type="text"], input[type="email"], textarea {
+  width: 100%;
+}
+
+fieldset {
+  margin: 12px;
+}
+
+#beggining-day, #beggining-month {
+  width: 5%;
+}
+
+#beggining-year {
+  width: 10%;
+}
+
