@@ -11,3 +11,22 @@ function generateStatesList () {
 }
 
 generateStatesList ();
+
+function checkBegginingDay () {
+  let dayInput = document.getElementById('beggining-day');
+  if (dayInput.value < 1 || dayInput.value > 31) {
+    alert('Dia inválido');
+    dayInput.value = '';
+  }
+}
+
+const dayInput = document.getElementById('beggining-day');
+dayInput.addEventListener('keyup', checkBegginingDay);
+
+const sendButton = document.getElementById('send-button');
+sendButton.addEventListener('click', function(event) {
+  event.preventDefault();
+  console.log("Clicou");
+})
+
+
