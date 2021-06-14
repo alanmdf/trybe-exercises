@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Adicione uma propriedade que defina o tamanho Flexbox base para o container da imagem 268px e para o container do menu 500px . Após aplicar as propriedades o header deverá estar similar a imagem abaixo: */
+
+.header-container {
+  display: flex;
+  background-color: #272822;
+}
+
+.logo-container {
+  flex-basis: 268px;
+  order: -1;
+}
+
+.menu-container {
+  flex-basis: 500px;
+}
+
+.menu-container ul {
+  color: white;
+  display: flex;
+  flex-basis: 500px;
+  list-style: none;
+}
+
+.menu-container ul li {
+  margin: 5px 20px;
+}
