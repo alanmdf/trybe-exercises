@@ -5,4 +5,3 @@ const creatingObject = (objectName, objectKey, objectKeyValue) => {
 }
 
 creatingObject('teste', 'testeChave', 'teste-valor');
-
