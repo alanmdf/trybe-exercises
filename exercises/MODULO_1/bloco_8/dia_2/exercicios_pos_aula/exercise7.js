@@ -69,13 +69,11 @@ function authorUnique() {
   let authorBirthYear;
   return books.some((book) => {
     if (!authorBirthYear || authorBirthYear === book.author.birthYear) {
-      authorBirthYear = book.author.birthYear
+      authorBirthYear = book.author.birthYear;
     }
     if (authorBirthYear === books[0].author.birthYear) {
       return false
-    } else {
-      return true
-    }
+    } return true
   })
 }
 assert.strictEqual(authorUnique(), expectedResult);
