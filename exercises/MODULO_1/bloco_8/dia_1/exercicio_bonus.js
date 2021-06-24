@@ -1,7 +1,7 @@
 const mage = {
   healthPoints: 130,
   intelligence: 45,
-  mana: 75,
+  mana: 125,
   damage: undefined,
 };
 
@@ -13,7 +13,7 @@ const warrior = {
 };
 
 const dragon = {
-  healthPoints: 700,
+  healthPoints: 600,
   strength: 50,
   damage: undefined,
 };
@@ -67,8 +67,8 @@ const gameActions = {
   },
   dragonTurn: (dragonDamage) => {
     let damage = dragonDamage();
-    warrior.healthPoints -= damage;
-    mage.healthPoints -= damage;
+    warrior.healthPoints = warrior.healthPoints < 0 ? warrior.healthPoints = 0 : warrior.healthPoints -= damage;
+    mage.healthPoints = mage.healthPoints < 0 ? mage.healthPoints = 0 : mage.healthPoints -= damage;
     dragon.damage = damage;
     return battleMembers;
   },
@@ -77,7 +77,7 @@ const gameActions = {
   }
 };
 
-for (let index = 0; index < 10; index += 1) {
+for (let index = 0; index < 7; index += 1) {
   if (dragon.healthPoints <= 0) {
     console.log('Parabéns, você venceu');
     break;
@@ -98,7 +98,16 @@ for (let index = 0; index < 10; index += 1) {
   }
   if (dragon.healthPoints > 0) {
     gameActions.dragonTurn(dragonDamage);
-  }  
+  }
+  if (dragon.healthPoints <= 0) {
+    dragon.healthPoints = 0;
+  }
+  if (warrior.healthPoints <= 0) {
+    warrior.healthPoints = 0;
+  }
+  if (mage.healthPoints <= 0) {
+    mage.healthPoints = 0;
+  }
   gameActions.showTurnResult()
 }
 
