@@ -12,7 +12,7 @@ const promise = new Promise((resolve, reject) => {
   const arraySum = newArray.reduce((acc, curr) => acc += curr)
   // console.log(arraySum);
   if (arraySum < 8000) {
-    resolve();
+    resolve(arraySum);
   } else {
     reject();
   }
@@ -20,7 +20,10 @@ const promise = new Promise((resolve, reject) => {
 
 const testPromise = async () => {
   promise
-  .then(() => console.log('Promise resolvida'))
+  .then((result) => {
+    const array = [result/2, result/3, result/5, result/10];
+    console.log(array);
+  })
   .catch(() => console.log('Promise rejeitada'))
 }
 
