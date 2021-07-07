@@ -9,7 +9,7 @@ const promise = new Promise((resolve, reject) => {
   // console.log(array);
   const newArray = array.map((item) => item * item);
   // console.log(newArray);
-  const arraySum = newArray.reduce((acc, curr) => acc += curr)
+  const arraySum = newArray.reduce((acc, curr) => acc + curr)
   // console.log(arraySum);
   if (arraySum < 8000) {
     resolve(arraySum);
@@ -18,12 +18,10 @@ const promise = new Promise((resolve, reject) => {
   }
 });
 
-const testPromise = async () => {
+const testPromise = () => {
   promise
-  .then((result) => {
-    const array = [result/2, result/3, result/5, result/10];
-    console.log(array);
-  })
+  .then((result) => [result/2, result/3, result/5, result/10])
+  .then((result) => result.reduce((acc, curr) => console.log(acc + curr), 0))
   .catch(() => console.log('É mais de oito mil! Essa promise deve estar quebrada!'))
 }
 
