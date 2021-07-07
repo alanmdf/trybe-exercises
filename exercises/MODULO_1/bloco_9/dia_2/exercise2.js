@@ -24,7 +24,7 @@ const testPromise = async () => {
     const array = [result/2, result/3, result/5, result/10];
     console.log(array);
   })
-  .catch(() => console.log('Promise rejeitada'))
+  .catch(() => console.log('É mais de oito mil! Essa promise deve estar quebrada!'))
 }
 
 testPromise();
