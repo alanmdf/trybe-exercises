@@ -14,5 +14,5 @@ describe('Check myRemoveWithoutCopy behavior', () => {
   });
   test('if returns the expected array', () => {
     expect(myRemoveWithoutCopy(array, 5)).toEqual(array);
-  })
+  });
 })
