@@ -1,6 +1,5 @@
 const {
   users,
-  findUserById,
   getUserName,
 } = require('../exercises/exercise2and3');
 

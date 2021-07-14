@@ -19,6 +19,5 @@ const users = {
 
   module.exports = {
     users,
-    findUserById,
     getUserName,
   };
