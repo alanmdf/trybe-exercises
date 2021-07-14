@@ -1,4 +1,4 @@
-const sum = require('./exercise1');
+const sum = require('../exercises/exercise1');
 
 describe('When adding two numbers', () => {
   test('if 4 + 5 = 9', () => {

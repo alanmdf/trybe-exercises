@@ -1,4 +1,4 @@
-const myRemove = require('./exercise2');
+const myRemove = require('../exercises/exercise2');
 const array = [1, 2, 3, 4];
 
 describe('Check myRemove function behavior', () => {
@@ -15,5 +15,5 @@ describe('Check myRemove function behavior', () => {
   });
   test('if returns the expected array', () => {
     expect(myRemove(array, 5)).toEqual(array);
-  })
+  });
 })

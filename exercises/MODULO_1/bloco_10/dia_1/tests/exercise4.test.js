@@ -1,4 +1,4 @@
-const myFizzBuzz = require('./exercise4');
+const myFizzBuzz = require('../exercises/exercise4');
 
 describe('Check myFizzBuzz behavior', () => {
   test('when a number divisible by 3 and 5 is passed by parameter, does it return "fizzbuzz"?', () => {
