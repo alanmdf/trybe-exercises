@@ -6,14 +6,16 @@ import pokemons from '../data';
 class Pokedex extends Component {
   render() {
     return (
-      pokemons.map(({ id , name, type, averageWeight, image }) => 
+    <div className='pokedex'>
+      { pokemons.map(({ id , name, type, averageWeight, image }) => 
         <Pokemon 
           key={ id } 
           name={ name }
           type={ type }
           avgWeight= { averageWeight }
           img={ image } 
-        />)
+        />) }
+    </div>
     )
   }
 }
